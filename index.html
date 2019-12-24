@@ -1,0 +1,176 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="A web page to track the Sentient anomaly">
+		<meta name="author" content="Markcreator">
+		
+		<title>Anomaly Tracker</title>
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="manifest" href="manifest.json">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#f44336">
+		<meta name="theme-color" content="#f44336">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111555410-6"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-111555410-6');
+		</script>
+	</head>
+	
+	<body class="grey lighten-2">
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper grey lighten-4">
+					<a class="brand-logo center grey-text hide-on-small-only">Anomaly Tracker</a>
+					<ul id="nav-mobile-right" class="right">
+						<li class="hide-on-med-and-down">
+							<a target='_blank' href="https://github.com/Markcreator/warframe-anomaly" class="grey-text">GitHub</a>
+						</li>
+						<li class="hide-on-small-only">
+							<a class="btn btn-large light-blue hoverable waves-effect donate" target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2C3ZXGNTS8W8G"><b><span data-lang="donate"></span></b></a>
+						</li>
+					</ul>
+
+					<ul id="nav-mobile-left" class="left">
+						<li><a id="night" class="amber tooltipped" data-position="bottom" data-delay="50" data-tooltip="Night Mode"><i id="nightIcon" class="material-icons">brightness_5</i></a></li>
+						<li><a id="notifications" class="red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Notifications"><i class="material-icons">message</i></a></li>
+						<li><a id="sounds" class="red tooltipped" data-position="bottom" data-delay="50" data-tooltip="Notification Sounds"><i id="soundsIcon" class="material-icons">volume_off</i></a></li>
+						<li>
+							<a id="language" class="dropdown-button" data-beloworigin='true' data-activates='dropdown-language'><span class="flow-text" data-lang="flag">Language</span></a>
+							<ul id='dropdown-language' class='dropdown-content'>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		
+		<main class="container">
+			<br/>
+			<div class="platform-navigation">
+				<div class="row">
+					<div class="col l3 s12">
+						<a class="card grey lighten-4 hoverable center-align waves-effect" id="pc" data-param="platform" data-value="pc">
+							PC
+						</a>
+					</div>
+					<div class="col l3 s12">
+						<a class="card grey lighten-4 hoverable center-align waves-effect" id="ps4" data-param="platform" data-value="ps4">
+							PS4
+						</a>
+					</div>
+					<div class="col l3 s12">
+						<a class="card grey lighten-4 hoverable center-align waves-effect" id="xbox" data-param="platform" data-value="xbox">
+							Xbox
+						</a>
+					</div>
+					<!---<div class="col l3 s12">
+						<a class="card grey lighten-4 hoverable center-align waves-effect" id="switch" data-param="platform" data-value="switch">
+							Nintendo Switch
+						</a>
+					</div>--->
+				</div>
+			</div>
+		
+			<div class="card grey lighten-4 hoverable">
+				<div class="card-content">
+					<p>
+						<!--<div class="row">
+							<div class="col l12 m12 s12">
+							<center>
+								<span class="green-text flow-text">Draak.Online has expanded its offerings!</span>
+								<br/><br/>
+								<a class="btn green hoverable waves-effect" target="_blank" href="https://warframe.draak.online/#pc">Visit</a>
+							</center>
+							</div>
+						</div>
+						
+						<hr/>
+						<br/>-->
+						
+						<div class="row">
+							<!--<div class="col l8 m6 s12">-->
+							<div class="col s12">
+								<span data-lang="intro1"></span>
+								<br/><br/>
+								<span data-lang="intro2"></span>
+								<br/>
+								<span data-lang="intro3"></span>
+							</div>
+							
+							<!--<div class="col l4 m6 s12">
+								<center style="position: relative;">
+									<img class="giveaway" src="https://vignette.wikia.nocookie.net/warframe/images/9/92/ArgonScopeMod.png/revision/latest?cb=20171007135230" />
+									<h3 class="giveaway-text green-text">Giveaway!</h3>
+									<br/>
+									<a class="btn grey hoverable waves-effect" target='_blank' href="https://gleam.io/e5WYi/acolytedraakonlines-argon-scope-giveaway-pc" rel="nofollow">Ended</a>
+								</center>
+							</div>-->
+						</div>
+					</p>
+				</div>
+			</div>
+			
+			<div id="acolytes">
+			</div>
+			
+			<div class="card grey lighten-4 hoverable">
+				<div class="card-content flow-text">
+					<p class="center-align" id="counter"></p>
+					<div id="loader" class="progress grey">
+						<div class="indeterminate black"></div>
+					</div>
+				</div>
+			</div>
+			
+			<br/>
+			
+			<div id="timers">
+			</div>
+		</main>
+		
+		<footer class="page-footer grey darken-3">
+			<div class="row">
+				<div class="col l6 grey darken-2">
+					<p class="white-text flow-text"><span data-lang="madeby"></span></p>
+					<ul>
+						<li><span data-lang="whyfree"></span></li>
+						<li><span data-lang="whydonate"></span></li>
+						
+						<a class="btn btn-large light-blue hoverable waves-effect donate donate-spacing" target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2C3ZXGNTS8W8G"><b><span data-lang="donate"></span></b></a>
+					</ul>
+				</div>
+				<div class="col l5 offset-l1 grey darken-3">
+					<br/>
+					<h5 class="white-text flow-text"><span data-lang="links"></span></h5>
+					<ul>
+						<li><a class="blue-text text-lighten-3" target='_blank' href="http://draak.online">Website</a></li>
+						<li><a class="blue-text text-lighten-3" target='_blank' href="https://github.com/Markcreator">GitHub</a></li>
+						<li><a class="blue-text text-lighten-3" target='_blank' href="https://discord.gg/XjpGdAQ">Discord</a></li>
+					</ul>
+					<br>
+					<p class="white-text"><span data-lang="translationby"></span></p>
+				</div>
+			</div>
+		</footer>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		
+		<script>
+			var script = document.createElement('script');
+			script.src = "js/app.js?_=" + new Date().getTime();
+			document.getElementsByTagName('body')[0].appendChild(script);
+		</script>
+	</body>
+</html> 
