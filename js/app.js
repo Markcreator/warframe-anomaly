@@ -336,7 +336,7 @@ $(function() {
 			render();
 			
 			$("#loader").hide();
-			loopCountdownUpdate(60, update);
+			loopCountdownUpdate(10, update);
 			$("#counter").show();
 		});
 	}
