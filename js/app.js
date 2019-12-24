@@ -282,10 +282,12 @@ $(function() {
 	// Function to render anomaly cards
 	function render() {
 		$("#anomaly").empty();
-		var tmpState = worldState.Tmp;
+		var tmpState = JSON.parse(worldState.Tmp);
 		var currentDisc = typeof tmpState.sfn !== 'undefined';
-		alert(typeof tmpState);
 		alert(tmpState);
+		alert(typeof tmpState);
+		alert(tmpState.sfn);
+		alert(typeof tmpState.sfn);
 		var location = currentDisc ? escapeHtml(nodes["CrewBattleNode" + tmpState.sfn].value) : getLangText("unknown");
 		
 		if(disc != currentDisc) {
