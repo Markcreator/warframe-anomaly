@@ -284,10 +284,6 @@ $(function() {
 		$("#anomaly").empty();
 		var tmpState = JSON.parse(worldState.Tmp);
 		var currentDisc = typeof tmpState.sfn !== 'undefined';
-		alert(tmpState);
-		alert(typeof tmpState);
-		alert(tmpState.sfn);
-		alert(typeof tmpState.sfn);
 		var location = currentDisc ? escapeHtml(nodes["CrewBattleNode" + tmpState.sfn].value) : getLangText("unknown");
 		
 		if(disc != currentDisc) {
