@@ -305,6 +305,7 @@ $(function() {
 		output.push('	<div class="card-stacked">');
 		output.push('		<div class="card-content flow-text">');
 		output.push("			<b>Sentient Anomaly</b>");
+		output.push("			<br/>");
 		output.push("			<b>" + getLangText("location") + "</b> " + location);
 		output.push("			<br/>");
 		output.push('		</div>');
