@@ -195,7 +195,7 @@ $(function() {
 		}
 	};
 	var worldState;
-	var disc;
+	var disc = false;
 	
 	// Timers
 	// TODO turn into timed anomaly discovery
