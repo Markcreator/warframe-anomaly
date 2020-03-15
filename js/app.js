@@ -8,6 +8,9 @@ var languages = {
 	},
 	"ko": {
 		"flag": "🇰🇷"
+	},
+	"cn": {
+		"flag": "🇨🇳"
 	}
 }
 var worldStateURLs = {
